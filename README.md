@@ -14,6 +14,10 @@ Plug 'ErichDonGubler/nerdtree-open-in-file-browser' | Plug 'ErichDonGubler/vim-f
 
 ## Usage
 
+Demo GIF:
+
+![](demo.gif)
+
 From NERDTree, select an arbitrary file or directory and press `E` to open it.
 
 If it doesn't Simply Work, then file a bug for this plugin's dependency [`vim-file-browser-integration`](https://github.com/erichdongubler/vim-file-browser-integration).
