@@ -1,30 +1,20 @@
-This Repro was originally a fork from [vim-nerdtree_plugin_collections](https://github.com/t9md/vim-nerdtree_plugin_collections).
+## `nerdtree-open-in-file-browser`
 
-## NerdtreePluginOpen
-NerdtreePluginOpen extends [Nerdtree](https://github.com/scrooloose/nerdtree) with the ability to open non text files with an appropriate application independent from vim.
+`nerdtree-open-in-file-browser` extends [Nerdtree](https://github.com/scrooloose/nerdtree) with the ability to open files with an application determined by your graphical file browser, independent of `vim`.
 
+This plugin is forked from [aufgang001/vim-nerdtree_plugin_open](https://github.com/aufgang001/vim-nerdtree_plugin_open), and modified to use the abstraction layer I wrote for opening files. It should work out-of-the-box on more platforms, even on [Git Bash](https://git-scm.com/downloads) and [Cygwin](https://www.cygwin.com/).
 
 ## Install
-Install this plugin with your favorite plugin-manager or manual with the following command:
-    
-    git clone https://github.com/aufgang001/vim-nerdtree_plugin_open.git  ~/.vim/vim-nerdtree_plugin_open.git
 
-Extend your .vimrc file with the following command:
+My favorite is VimPlug:
 
-    let g:nerdtree_plugin_open_cmd = '<your command>'
-
-"Your command" depends on the operating system and desktop environment, just check if one of those are available: 
-
-* xdg-open (desktop-independent tool)
-* gnome-open (gnome)
-* exo-open (xfce)
-* gvfs-open (whatever, I have no idea)
-* kde-open (kde)
-* open (MacOS)
-* use your own command, if you think that stuff is to creepy
-    
+```
+Plug 'ErichDonGubler/nerdtree-open-in-file-browser'
+```
 
 ## Usage
-Select an arbitrary file or directory and press the button <**E**> to open the file with the default program choosen by the operating system or the directory with the default file manager.
 
+From NERDTree, select an arbitrary file or directory and press `E` to open it.
+
+If it doesn't Simply Work, then file a bug for this plugin's dependency [`vim-file-browser-integration`](https://github.com/erichdongubler/vim-file-browser-integration).
 

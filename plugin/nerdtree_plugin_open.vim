@@ -9,15 +9,17 @@ endfunction
 
 function! s:callback()
     try
-        let path = g:NERDTreeFileNode.GetSelected().path.str({'escape': 1})
+        let l:path = g:NERDTreeFileNode.GetSelected().path.str({'escape': 1})
     catch
         return
     endtry
 
-    if exists("g:nerdtree_plugin_open_cmd")
-        let cmd = g:nerdtree_plugin_open_cmd . " " . path
-        call system(cmd)
-    endif
+	try
+		call file_browser_integration#OpenFile(l:path)
+	catch
+		echoe 'file_browser_integration not installed (see docs for more details)'
+		return
+	endtry
 endfunction
 
 call NERDTreeAddKeyMap({
