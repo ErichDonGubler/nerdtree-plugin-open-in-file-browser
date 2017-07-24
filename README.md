@@ -9,7 +9,7 @@ This plugin is forked from [aufgang001/vim-nerdtree_plugin_open](https://github.
 My favorite is VimPlug:
 
 ```
-Plug 'ErichDonGubler/nerdtree-open-in-file-browser' | Plug 'ErichDonGubler/vim-file-browser-integration'
+Plug 'ErichDonGubler/nerdtree-plugin-open-in-file-browser' | Plug 'ErichDonGubler/vim-file-browser-integration'
 ```
 
 ## Usage
